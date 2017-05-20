@@ -1,0 +1,244 @@
+<!-- start navigation -->
+<div  style="height: 105px !important;" class="navbar navbar-fixed-top navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+      <a href="#" class="navbar-brand"><img src="assets/images/rsz_logo_kaizen.png" class="img-responsive logo" alt="logo"></a>
+      <div class="logo-title" >
+        <span>Empresa de Obras, Proyectos y Servicios</span>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li *ngFor="let menu of menus"><a href="#{{menu?.href}}" class="{{menu?.class || ''}}">{{menu?.titulo}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end navigation -->
+
+<!-- start home -->
+<section style="margin-top: 50px;color: yellow;" id="home" class="text-center">
+  <div class="templatemo_headerimage">
+    <div class="flexslider">
+      <ul class="slides">
+        <li>
+          <!--<img src="assets/images/slider/1.jpg" alt="Slide 1">-->
+          <img height="780px" src="assets/images/Engineer.jpg" alt="Slide 1">
+          <div class="slider-caption">
+            <div class="templatemo_homewrapper" style="color: yellow">
+              <h1 style="font-weight: bolder;" class="wow fadeInDown" data-wow-delay="2000">Empresa de Obras, Proyectos y Servicios</h1>
+              <h2 class="wow fadeInDown" data-wow-delay="2000">
+                <span>SERVICIOS DE MANTENIMIENTO </span>
+              </h2>
+              <a href="#service" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Nuestro trabajo</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="assets/images/slider/2.jpg" alt="Slide 2">
+          <div class="slider-caption">
+            <div class="templatemo_homewrapper">
+              <h1 class="wow fadeInDown" data-wow-delay="2000">INGENIERIA INDUSTRIAL</h1>
+              <h2 class="wow fadeInDown" data-wow-delay="2000">
+                <span></span>
+              </h2>
+              <p></p>
+              <a href="#about" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000" (click)="aboutUs()">Sobre nosotros</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- end home -->
+
+<!-- start service -->
+<!--<div id="service">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <div class="media">
+          <div class="media-object media-left wow fadeIn" data-wow-delay="0.1s">
+            <i class="fa fa-laptop"></i>
+          </div>
+          <div class="media-body wow fadeIn">
+            <h3 class="media-heading">Fully Responsive</h3>
+            <p>Please check <a rel="nofollow" href="http://fortawesome.github.io/Font-Awesome/examples/" target="_parent">examples</a>              to change <a rel="nofollow" href="http://fontawesome.io/icons/" target="_parent">icons</a> easily. Lorem ipsum
+              dolor sit amet, consectetuer adipiscing.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <div class="media">
+          <div class="media-object media-left wow fadeIn" data-wow-delay="0.3s">
+            <i class="fa fa-cog"></i>
+          </div>
+          <div class="media-body wow fadeIn">
+            <h3 class="media-heading">Customize Easily</h3>
+            <p>Solution is a website template from Tooplate. You can download, edit and use this for any purpose.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <div class="media">
+          <div class="media-object media-left wow fadeIn" data-wow-delay="0.6s">
+            <i class="fa fa-paper-plane"></i>
+          </div>
+          <div class="media-body wow fadeIn" data-wow-delay="0.3s">
+            <h3 class="media-heading">SEO Friendly</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euism.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <div class="media">
+          <div class="media-object media-left wow fadeIn" data-wow-delay="0.9s">
+            <i class="fa fa-html5"></i>
+          </div>
+          <div class="media-body wow fadeIn" data-wow-delay="0.6s">
+            <h3 class="media-heading">HTML5 Website</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euism.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <div class="media">
+          <div class="media-object media-left wow fadeIn" data-wow-delay="0.4s">
+            <i class="fa fa-comments-o"></i>
+          </div>
+          <div class="media-body wow fadeIn" data-wow-delay="0.3s">
+            <h3 class="media-heading">Quick Support</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euism.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <div class="media">
+          <div class="media-object media-left wow fadeIn" data-wow-delay="0.8s">
+            <i class="fa fa-check-circle"></i>
+          </div>
+          <div class="media-body wow fadeIn" data-wow-delay="0.6s">
+            <h3 class="media-heading">Up to Date</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euism.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+<div id="service" style="color: yellow;text-align: center;">
+  <div class="container">
+    <h1 class="tit">SERVICIOS DE MANTENIMIENTO</h1>
+    <div class="row">      
+      <div class="col-md-4 col-sm-4" *ngFor="let service of services1">
+        <div class="media">
+          <div class="media-object media-left wow fadeIn" data-wow-delay="0.4s">
+            <i class="fa {{service?.icon || ''}}"></i>
+          </div>
+          <div class="media-body wow fadeIn" data-wow-delay="0.3s">
+            <h3 class="media-heading">{{service?.titulo}}</h3>
+            <p>{{ service?.descripcion }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="separador"></div>
+  <div class="container">
+    <h1 class="tit">INGENIERIA INDUSTRIAL</h1>
+    <div class="row">      
+      <div class="col-md-4 col-sm-4" *ngFor="let service of services2">
+        <div class="media">
+          <div class="media-object media-left wow fadeIn" data-wow-delay="0.4s">
+            <i class="fa {{service?.icon || ''}}"></i>
+          </div>
+          <div class="media-body wow fadeIn" data-wow-delay="0.3s">
+            <h3 class="media-heading">{{service?.titulo}}</h3>
+            <p>{{ service?.descripcion }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end service -->
+
+<!-- start divider -->
+<div id="divider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1 col-sm-1"></div>
+      <div class="col-md-8 col-sm-8">
+        <h2 class="wow bounce">Proveemos  <strong>soluciones</strong></h2>
+        <h3 class="wow fadeIn" data-wow-delay="0.6s">
+          <mark>Creativos</mark> Profesioneles &amp;
+          <mark>Talentosos</mark> Profesioneles</h3>
+        <p class="wow fadeInUp" data-wow-delay="0.9s">Nos dedicamos a desarrollo de soluciones adaptativas basadas en el conocimiento.
+
+        </p>
+      </div>
+      <div class="col-md-2 col-sm-2"></div>
+    </div>
+  </div>
+</div>
+<!-- end divider -->
+
+
+<!-- start contact -->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-4 wow fadeInLeft" data-wow-delay="0.6s">
+        <h2><strong>Kaizen </strong> Ing.</h2>
+        <p> Nos dedicamos a desarrollo de soluciones adaptativas basadas en el conocimiento.</p>
+        <ul class="social-icon">
+          <li>
+            <a href="#" class="fa fa-facebook"></a>
+          </li>
+          <li>
+            <a href="#" class="fa fa-twitter"></a>
+          </li>
+          <li>
+            <a href="#" class="fa fa-instagram"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-4 wow fadeIn" data-wow-delay="0.9s">
+        <address>
+          <h3>Oficinas</h3>
+          <p><i class="fa fa-map-marker too-icon"></i> 25 DE AGOSTO 745 <br>CIUDAD INDUSTRIAL DE PANDO </p>
+          <p><i class="fa fa-phone too-icon"></i> 093 806 678 </p>
+          <p><i class="fa fa-envelope-o too-icon"></i> gerardo@kaizeningenieria.com.uy</p>
+        </address>
+      </div>
+      <form action="#" method="post" class="col-md-6 col-sm-4" id="contact-form" role="form">
+        <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+          <input name="name" type="text" class="form-control" id="name" placeholder="Nombre">
+        </div>
+        <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+          <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="col-md-12 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
+          <textarea name="message" rows="5" class="form-control" id="message" placeholder="Mensaje"></textarea>
+        </div>
+        <div class="col-md-offset-9 col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+          <input name="submit" type="submit" class="form-control" id="submit" value="Enviar">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- end contact -->
+
+<!-- start google map -->
+<!--<div class="google_map">
+  <div id="map-canvas"></div>
+</div>-->
+<!-- end google map -->
