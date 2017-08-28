@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Inject } from "@angular/core";
+import { Http } from "@angular/http";
 
 @Component({
     selector: "k-main",
@@ -6,14 +7,21 @@ import { Component } from "@angular/core";
 })
 export class Main {
     Copyright: string = "KAIZEN";
-    constructor() {
+    constructor( @Inject(Http) protected http: Http) {
         this.services1.forEach((val, index) => {
 
         }, this);
-        for (let x in this.services1) { 
-            
+        for (let x in this.services1) {
+
         }
     }
+
+    public get MailSent():boolean{
+        return this.mailSent;
+    }
+    
+    mailSent: boolean = false;
+
     aboutUs() {
         alert("asdasd");
     }
@@ -66,6 +74,10 @@ export class Main {
         descripcion: " INSTALACIONES NUEVAS Y EN USO",
         icon: "fa-check-circle"
     }, {
+        titulo: "PLC ",
+        descripcion: " ",
+        icon: "fa-check-circle"
+    }, {
         titulo: "INVERSORES DE FRECUENCIA   ",
         descripcion: " ",
         icon: "fa-check-circle"
@@ -82,20 +94,33 @@ export class Main {
     },
     {
         titulo: "AUTOMATISMOS INDUSTRIALES   ",
-        descripcion: "PLC ",
+        descripcion: " ",
         icon: "fa-check-circle"
     },
     {
         titulo: "ADECUACION TECNOLOGICA DE PLANTAS INDUSTRIALES   ",
-        descripcion: "PLC ",
+        descripcion: " ",
         icon: "fa-check-circle"
     }
-
-
     ];
+
+
     menus = [{
         href: "home", class: "smoothScroll", titulo: "HOME"
     }, {
         href: "contact", class: "smoothScroll", titulo: "CONTACT"
     }];
+
+  
+
+    enviar(txtName: HTMLInputElement, txtEmail: HTMLInputElement, txtMessage: HTMLTextAreaElement): void {
+        console.log(txtName.value, txtEmail.value, txtMessage.value)
+        this.http.post("http://www.kaizeningenieria.com.uy/KApi/api/Email/sendMail", {
+            sender: txtEmail.value,
+            subject: txtName.value,
+            message: txtMessage.value
+        }).subscribe((message: any) => {
+            this.mailSent = <string>message === "SUCCESS";
+        });
+    }
 }
